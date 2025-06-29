@@ -1,0 +1,148 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic Styling */
+body {
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  color: #232946;
+  min-height: 100vh;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #232946;
+  padding: 1.2rem 2rem;
+  color: #fffffe;
+  box-shadow: 0 2px 12px rgba(35,41,70,0.07);
+}
+
+.brand-title {
+  font-size: 2rem;
+  font-family: 'Pacifico', cursive, 'Poppins', Arial, sans-serif;
+  letter-spacing: 2px;
+  color: #eebbc3;
+  text-shadow: 1px 2px 8px #23294644;
+}
+
+.navbar-links ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar-links ul li {
+  padding: 0 20px;
+}
+
+.navbar-links ul li a {
+  color: #eebbc3;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  transition: color 0.2s, border-bottom 0.2s;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+
+.navbar-links ul li a:hover {
+  color: #fffffe;
+  border-bottom: 2px solid #eebbc3;
+}
+
+.toggle-button {
+  display: none;
+  font-size: 28px;
+  color: #eebbc3;
+  background: none;
+  border: none;
+}
+
+/* Content Section */
+.content {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: #fffffe;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(35,41,70,0.10);
+  margin: 2.5rem auto;
+  max-width: 750px;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+.content h1, .content h2 {
+  font-family: 'Pacifico', cursive, 'Poppins', Arial, sans-serif;
+  color: #232946;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  color: #393e46;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.button, button, .btn {
+  background: #232946;
+  color: #eebbc3;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(35,41,70,0.08);
+  margin-top: 10px;
+}
+
+.button:hover, button:hover, .btn:hover {
+  background: #eebbc3;
+  color: #232946;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .content {
+    max-width: 98vw;
+    padding: 2rem 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .toggle-button {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar-links.active {
+    display: block;
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-links ul li {
+    padding: 12px 0;
+  }
+}
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap');
