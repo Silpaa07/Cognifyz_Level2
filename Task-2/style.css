@@ -1,0 +1,95 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic Styling */
+body {
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background-color: #f4f6fb;
+  color: #222;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a2e;
+  padding: 1rem;
+  color: #f5f6fa;
+}
+
+.brand-title {
+  font-size: 1.7rem;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  letter-spacing: 2px;
+  color: #ffd700;
+}
+
+.navbar-links ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar-links ul li {
+  padding: 0 18px;
+}
+
+.navbar-links ul li a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  transition: color 0.2s;
+}
+
+.navbar-links ul li a:hover {
+  color: #f5f6fa;
+}
+
+.toggle-button {
+  display: none;
+  font-size: 26px;
+  color: #ffd700;
+  background: none;
+  border: none;
+}
+
+/* Content Section */
+.content {
+  padding: 2.5rem;
+  text-align: center;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(26,26,46,0.07);
+  margin: 2rem auto;
+  max-width: 700px;
+}
+
+/* ----------- MEDIA QUERY FOR RESPONSIVE DESIGN ----------- */
+@media (max-width: 768px) {
+  .toggle-button {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar-links.active {
+    display: block;
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-links ul li {
+    padding: 10px 0;
+  }
+}
