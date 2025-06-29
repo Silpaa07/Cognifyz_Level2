@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Bootstrap Layout</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tailwind CSS CDN for utility classes (optional, but good for quick styling) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa; /* Light gray background */
+            padding-top: 20px;
+        }
+        .container {
+            max-width: 960px; /* Max width for content */
+        }
+        .card {
+            border: none; /* Remove default card border */
+            border-radius: 0.75rem; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px); /* Lift card on hover */
+        }
+        .card-img-top {
+            border-top-left-radius: 0.75rem;
+            border-top-right-radius: 0.75rem;
+            object-fit: cover; /* Ensure image covers the area */
+            height: 200px; /* Fixed height for consistency */
+        }
+        .grid-item {
+            background-color: #e2e8f0; /* Light blue-gray for grid items */
+            border-radius: 0.5rem;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            min-height: 100px; /* Minimum height for grid items */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h2, h3 {
+            color: #343a40; /* Darker text for headings */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4">
+        <h2 class="text-3xl font-bold text-center mb-8">Responsive Layout Demo</h2>
+
+        <!-- Responsive Card Component -->
+        <div class="mb-10">
+            <h3 class="text-2xl font-semibold mb-4">Featured Card</h3>
+            <div class="card bg-white">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfZEDU1txs-GERcF3-e-rKjWkSEIvkCcm9mw&s" class="card-img-top" alt="Placeholder Image">
+                <div class="card-body p-4">
+                    <h5 class="card-title text-xl font-bold mb-2">Beautiful Scenery</h5>
+                    <p class="card-text text-gray-700">
+                        This is a responsive card component built with Bootstrap. It features an image at the top,
+                        followed by a title and some descriptive text. The card adjusts its size gracefully
+                        on different screen sizes.
+                    </p>
+                    <a href="#" class="btn btn-primary bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md mt-3">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Responsive Grid Layout -->
+        <div>
+            <h3 class="text-2xl font-semibold mb-4">Responsive Grid</h3>
+            <div class="row g-4">
+                <!-- Column 1: Takes full width on small screens, half on medium, quarter on large -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="grid-item text-gray-800">Grid Item 1</div>
+                </div>
+                <!-- Column 2: Takes full width on small screens, half on medium, quarter on large -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="grid-item text-gray-800">Grid Item 2</div>
+                </div>
+                <!-- Column 3: Takes full width on small screens, half on medium, quarter on large -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="grid-item text-gray-800">Grid Item 3</div>
+                </div>
+                <!-- Column 4: Takes full width on small screens, half on medium, quarter on large -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="grid-item text-gray-800">Grid Item 4</div>
+                </div>
+                 <!-- Example of different column sizes -->
+                <div class="col-12 col-md-4">
+                    <div class="grid-item text-gray-800">Item A </div>
+                </div>
+                <div class="col-12 col-md-8">
+                    <div class="grid-item text-gray-800">Item B </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS CDN (Bundle with Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
